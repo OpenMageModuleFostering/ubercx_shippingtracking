@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
-    "description": "Track Shipment allows customer to track his order shipping using USPS, Fedex, UPS and DHL shipping methods.",
+    "description": "Embedded Shipping Tracking, It allows customer to see shipping details. Retailers can use USPS, Fedex, UPS and DHL shipping methods.",
     "authors": [
     {
         "name": "UberCX",

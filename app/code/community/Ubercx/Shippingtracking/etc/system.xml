@@ -44,7 +44,7 @@
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>1</show_in_store>
-					<comment><![CDATA[This plugin allows real time shipment tracking for UPS, USPS, FEDEX, DHL carriers. It connects with uberCX API, which responds in JSON payload. Please visit this <a target="_blank" href="http://support.ubercx.io/support/solutions/articles/6000006989-magento-plugin">link</a> to detail documentation about Magento plugin and recipes.<br>This plugin comes with default page which shows shipping tracking details on customer order detail page.]]></comment>
+					<comment><![CDATA[This plugin allows real time shipment tracking for UPS, USPS, FEDEX, DHL carriers. It connects with uberCX API, which responds in JSON payload. Please visit this <a target="_blank" href="https://ubercx.io/track/plugins/magento">link</a> to detail documentation about Magento plugin and recipes.<br>This plugin comes with default page which shows shipping tracking details on customer order detail page.]]></comment>
           <fields>
 						<shippingtracking_user_key translate="label">
               <label>User Key</label>

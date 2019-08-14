@@ -100,7 +100,7 @@ class Ubercx_Shippingtracking_Block_List extends Mage_Shipping_Block_Tracking_Po
 			$response = json_decode($response);	
 		}
 		elseif($status==403){
-			$response = "Please check your Ubercx user key.";
+			$response = "Please check your UberCX developer user key.";
 		}
 		else{
 			$response = "There is no tracking available.";

@@ -15,7 +15,7 @@
  *
  * @category   UBERCX
  * @package    Ubercx_Shippingtracking
- * @copyright  Copyright (c) 2015 Ubercx, Inc.
+ * @copyright  Copyright (c) 2015 JFrameworks.com, LLC.
  * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
  * @license    http://opensource.org/licenses/gpl-license GNU General Public License
  */
@@ -23,7 +23,7 @@
 <config>
   <modules>
     <Ubercx_Shippingtracking>
-      <version>1.0.1</version>
+      <version>1.0.3</version>
     </Ubercx_Shippingtracking>
   </modules>
   <global>
