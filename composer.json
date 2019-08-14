@@ -6,8 +6,8 @@
     "description": "Embedded Shipping Tracking, It allows customer to see shipping details. Retailers can use USPS, Fedex, UPS and DHL shipping methods.",
     "authors": [
     {
-        "name": "UberCX",
-        "email": "support@ubercx.io"
+        "name": "snapCX",
+        "email": "support@snapcx.io"
     }
 ],
     "suggest": {

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Ubercx_Shippingtracking</name>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
     <channel>community</channel>
@@ -9,7 +9,7 @@
     <summary>Embedded Shipping Tracking, It allows customer to see shipping details. Retailers can use USPS, Fedex, UPS and DHL shipping methods.</summary>
     <description>Track Shipment allows customer to track his order shipping using USPS, Fedex, UPS and DHL shipping methods.</description>
     <notes>This is stable release for the extension</notes>
-    <authors><author><name>UberCX</name><user>UberCX</user><email>support@ubercx.io</email></author></authors>
+    <authors><author><name>snapCX</name><user>snapCX</user><email>support@snapcx.io</email></author></authors>
     <date>2015-09-16</date>
     <time>12:00:00</time>
     <contents>

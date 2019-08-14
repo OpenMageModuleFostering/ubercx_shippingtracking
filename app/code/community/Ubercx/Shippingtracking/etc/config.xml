@@ -23,7 +23,7 @@
 <config>
   <modules>
     <Ubercx_Shippingtracking>
-      <version>1.0.6</version>
+      <version>1.0.7</version>
     </Ubercx_Shippingtracking>
   </modules>
   <global>
@@ -74,7 +74,7 @@
 	</frontend>
 	<default>
 		<shippingtracking>
-			<ubercx_api_url><![CDATA[https://api.ubercx.io/tracking/v1/getTrackingDetails?carrier=CARRIER_CODE&trackId=TRACK_ID]]></ubercx_api_url>
+			<ubercx_api_url><![CDATA[https://api.snapcx.io/tracking/v1/getTrackingDetails?carrier=CARRIER_CODE&trackId=TRACK_ID]]></ubercx_api_url>
 		</shippingtracking>
 	</default>
 	<adminhtml>
