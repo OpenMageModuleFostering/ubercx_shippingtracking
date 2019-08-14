@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Ubercx_Shippingtracking</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
     <channel>community</channel>
@@ -64,6 +64,15 @@
 				<dir name="modules">
 					<file name="Ubercx_Shippingtracking.xml" hash="6ccb8f1b2e2930b3d6774e1fc106dc04"/>
 				</dir>
+			</target>
+			<target name="magemedia">
+				<dir name="Ubercx">
+					<dir name="Shippingtracking">
+						<file name="delivered_green_sm.png" hash="6ccb8f1b2e2930b3d6774e1fc106dc04"/>
+						<file name="info_black_sm.png" hash="6ccb8f1b2e2930b3d6774e1fc106dc04"/>
+						<file name="shipped_blue_sm.png" hash="6ccb8f1b2e2930b3d6774e1fc106dc04"/>
+					</dir>
+				</dir>	
 			</target>
 		</contents>
     <compatible/>
