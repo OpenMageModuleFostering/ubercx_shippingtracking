@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Ubercx_Shippingtracking</name>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
     <channel>community</channel>
@@ -9,35 +9,45 @@
     <summary>Embedded Shipping Tracking, It allows customer to see shipping details. Retailers can use USPS, Fedex, UPS and DHL shipping methods.</summary>
     <description>Track Shipment allows customer to track his order shipping using USPS, Fedex, UPS and DHL shipping methods.</description>
     <notes>This is stable release for the extension</notes>
-    <authors><author><name>UberCX</name><user>admin</user><email>support@ubercx.io</email></author></authors>
-    <date>2015-08-22</date>
+    <authors><author><name>UberCX</name><user>UberCX</user><email>support@ubercx.io</email></author></authors>
+    <date>2015-09-16</date>
     <time>12:00:00</time>
     <contents>
-			<target name="magecommunity">
-				<dir name="Ubercx">
-					<dir name="Shippingtracking">
-						<dir name="Block">
-							<file name="List.php" hash="3b8d9b7096100452530f698703ac4b1a"/>
-							<dir name="Order">
-								<dir name="Shipment">
-									<file name="Items.php" hash="c399f3f91eead9596c424fbbc18a5bd8"/>
+     <target name="magecommunity">
+			<dir name="Ubercx">
+				<dir name="Shippingtracking">
+					<dir name="Block">
+						<dir name="Adminhtml">
+							<dir name="Sales">
+								<dir name="Order">
+									<dir name="Shipment">
+										<dir name="View"><file name="Tracking.php" hash="82bc98f8542e0fc528a58d29f3bdbe59"/></dir>
+									</dir>
 								</dir>
-								<file name="View.php" hash="8211363692f450f1031a9db2c0c97dd1"/>
 							</dir>
 						</dir>
-						<dir name="Helper">
-							<file name="Data.php" hash="ca5fa56683203f3ec2b626672ca70277"/>
+						<file name="List.php" hash="3b8d9b7096100452530f698703ac4b1a"/>
+						<dir name="Order">
+							<dir name="Shipment"><file name="Items.php" hash="c399f3f91eead9596c424fbbc18a5bd8"/></dir>
+							<file name="View.php" hash="8211363692f450f1031a9db2c0c97dd1"/>
 						</dir>
-						<dir name="Model">
-							<file name="Info.php" hash="930e6e84ee01c35f4ec3c7f10e248212"/>
+					</dir>
+					<dir name="Helper"><file name="Data.php" hash="ca5fa56683203f3ec2b626672ca70277"/></dir>
+					<dir name="Model"><file name="Info.php" hash="930e6e84ee01c35f4ec3c7f10e248212"/></dir>
+					<dir name="controllers">
+						<file name="ListController.php" hash="a2d36f4fda30aa81586ae838c8b63991"/>
+						<dir name="Sales">
+							<dir name="Order"><file name="ShipmentController.php" hash="da6ca2befa3c85bfc2c124403a2a1170"/></dir>
 						</dir>
-						<dir name="controllers">
-							<file name="ListController.php" hash="a2d36f4fda30aa81586ae838c8b63991"/>
-						</dir>
-						<dir name="etc"><file name="adminhtml.xml" hash="3053a2ca3c927e71ff15e5b325bb43a8"/>
-						<file name="config.xml" hash="13c006a4cf2d9d98be62a412a8b1992f"/>
-						<file name="system.xml" hash="ee91865715b9771ab51c1fb0a64a4bfe"/></dir></dir></dir>
-			</target>
+					</dir>
+					<dir name="etc">
+						<file name="adminhtml.xml" hash="3053a2ca3c927e71ff15e5b325bb43a8"/>
+						<file name="config.xml" hash="080949f5fd6e73d8327922f9ec97c589"/>
+						<file name="system.xml" hash="7421cda02b5fbbc907abb38c47e88089"/>
+					</dir>
+				</dir>
+			</dir>			
+    </target>
 			<target name="magedesign">
 				<dir name="frontend">
 					<dir name="base">

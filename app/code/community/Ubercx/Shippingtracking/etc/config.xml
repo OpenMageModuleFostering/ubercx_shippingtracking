@@ -15,7 +15,7 @@
  *
  * @category   UBERCX
  * @package    Ubercx_Shippingtracking
- * @copyright  Copyright (c) 2015 JFrameworks.com, LLC.
+ * @copyright  Copyright (c) 2015 Ubercx, Inc.
  * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
  * @license    http://opensource.org/licenses/gpl-license GNU General Public License
  */
@@ -23,7 +23,7 @@
 <config>
   <modules>
     <Ubercx_Shippingtracking>
-      <version>1.0.5</version>
+      <version>1.0.6</version>
     </Ubercx_Shippingtracking>
   </modules>
   <global>
@@ -44,9 +44,14 @@
 			<sales>
 				<rewrite>
 					<order_view>Ubercx_Shippingtracking_Block_Order_View</order_view>
-				    <order_shipment_items>Ubercx_Shippingtracking_Block_Order_Shipment_Items</order_shipment_items>
+				  <order_shipment_items>Ubercx_Shippingtracking_Block_Order_Shipment_Items</order_shipment_items>
 				</rewrite>
 			</sales>
+			<adminhtml>
+				<rewrite>
+					<sales_order_shipment_view_tracking>Ubercx_Shippingtracking_Block_Adminhtml_Sales_Order_Shipment_View_Tracking</sales_order_shipment_view_tracking>
+				</rewrite>
+			</adminhtml>
 		</blocks>
   </global>
 	<frontend>
@@ -72,4 +77,13 @@
 			<ubercx_api_url><![CDATA[https://api.ubercx.io/tracking/v1/getTrackingDetails?carrier=CARRIER_CODE&trackId=TRACK_ID]]></ubercx_api_url>
 		</shippingtracking>
 	</default>
+	<adminhtml>
+    	<layout>
+        	<updates>
+            	<shippingtracking>
+					<file>shippingtracking.xml</file>
+				</shippingtracking>
+        	</updates>
+    	</layout>
+ 	</adminhtml>
 </config> 
