@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Ubercx_Shippingtracking",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License",
+    "homepage": "",
+    "description": "Track Shipment allows customer to track his order shipping using USPS, Fedex, UPS and DHL shipping methods.",
+    "authors": [
+    {
+        "name": "UberCX",
+        "email": "support@ubercx.io"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,121 @@
+<?php
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   UBERCX
+ * @package    Ubercx_Shippingtracking
+ * @copyright  Copyright (c) 2015 Ubercx, Inc.
+ * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+?>
+<?php $_results = $this->getTrackingInfo(); ?>
+<?php 
+//echo "<pre>"; print_r($_results); 
+?>
+<div class="page-title title-buttons">
+  <h1><?php echo $this->__('Tracking Information'); ?></h1>
+  <button class="button" onclick="window.close(); window.opener.focus();"><span><span><?php echo $this->__('Close Window') ?></span></span></button>
+</div>
+<?php if(sizeof($_results)>0): ?>
+<?php foreach($_results as $shipid => $_result): ?>
+<?php if($shipid): ?>
+<h2 class="sub-title"><?php echo $this->__('Shipment #').$shipid; ?></h2>
+<?php endif; ?>
+<?php if(sizeof($_result)>0): ?>
+<?php $rowCount = sizeof($_result); $counter = 1; ?>
+<?php $_id = 0; foreach($_result as $track_id => $track): ?>
+<table class="tracking-table-popup data-table" id="tracking-table-popup-<?php echo $_id ?>">
+  <col width="15%" />
+  <col />
+  <tbody>
+    <?php if(isset($track['tracking_number'])): ?>
+    <tr>
+      <th class="label"><?php echo $this->__('Tracking Number:'); ?></th>
+      <td class="value"><?php echo $this->escapeHtml($track['tracking_number']); ?></td>
+    </tr>
+    <?php if ($track['title']): ?>
+    <tr>
+      <th class="label"><?php echo $this->__('Carrier:'); ?></th>
+      <td class="value"><?php echo $this->escapeHtml($track['title']); ?></td>
+    </tr>
+    <?php endif; ?>
+    
+    <?php endif; ?>
+  </tbody>
+</table>
+<script type="text/javascript">decorateTable('tracking-table-popup-<?php echo $_id++ ?>');</script>
+
+<?php if (isset($track['tracking_number'])){?>
+<?php $tracking_list = $this->getTrackingList($track['tracking_number'],$track['carrier_code']);?>
+<?php if(is_object($tracking_list)){?>
+<div class="box-account box-recent">
+  <div class="box-head">
+    <h2><?php echo $this->__('Tracking List'); ?></h2>
+  </div>
+  <table id="ubercx-tracking-table<?php echo $track_id ?>" class="data-table">
+    <colgroup>
+    <col width="1">
+    <col width="1">
+    <col width="1">
+    <col>
+    </colgroup>
+    <thead>
+      <tr class="first last">
+        <th><?php echo $this->__('Time') ?></th>
+        <th><?php echo $this->__('Date') ?></th>
+        <th><?php echo $this->__('Location') ?></th>
+        <th><?php echo $this->__('Message') ?></th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php if(isset($tracking_list->trackRecord[0])){?>
+      <?php if(count($tracking_list->trackRecord[0]->trackEvent)){?>
+      <?php foreach($tracking_list->trackRecord[0]->trackEvent as $track_record){?>
+      <tr class="first last odd">
+        <td><span class="nobr"><?php echo $track_record->time?></span></td>
+        <td><span class="nobr"><?php echo $track_record->date?></span></td>
+        <td><?php echo $track_record->location?></td>
+        <td><?php echo $track_record->message?></td>
+      </tr>
+      <?php }?>
+      <?php } else {?>
+      <tr>
+      	<td colspan="4"><p><?php echo $this->__('There is no tracking available for this track number.'); ?></p></td>
+      </tr>
+      <?php }?>
+      <?php }?>
+    </tbody>
+  </table>
+  <script type="text/javascript">decorateTable('ubercx-tracking-table<?php echo $track['tracking_number']; ?>')</script> 
+</div>
+<?php } else{ ?>
+<p><?php echo $tracking_list; ?></p>
+<?php }?>
+<?php }?>
+<div class="divider"></div>
+<?php if($counter!=$rowCount): ?>
+<?php endif; ?>
+<?php $counter++; ?>
+<!--end for each tracking information-->
+<?php endforeach; ?>
+<?php else: ?>
+<p><?php echo $this->__('There is no tracking available for this shipment.'); ?></p>
+<?php endif; ?>
+<?php endforeach; ?>
+<?php else: ?>
+<p><?php echo $this->__('There is no tracking available.'); ?></p>
+<?php endif; ?>
+<div class="buttons-set">
+  <button type="button" title="<?php echo $this->__('Close Window') ?>" class="button" onclick="window.close(); window.opener.focus();"><span><span><?php echo $this->__('Close Window') ?></span></span></button>
+</div>
