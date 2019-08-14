@@ -126,12 +126,12 @@ if(sizeof($_results) > 0):
      && ($tracking_list->trackRecord[0]->trackSummary->status == 'SUCCESS')		 
     )  { 
 	   $trackSummaryVar = $tracking_list->trackRecord[0]->trackSummary;
-	   $isDelivered = ($trackSummaryVar->delivered == 'true')?true:false;
+	   $isDelivered = ((int)$trackSummaryVar->delivered == 1)?true:false;
 ?>
 <br/>
 <div class="shipping-summary-container">
   <div class="imageContent">
-	  <img src="<?php echo (isDelivered)?$deliveredImageURL:$shippedImageURL ?>" />
+	  <img src="<?php echo ($isDelivered)?$deliveredImageURL:$shippedImageURL ?>" />
 	</div>
   <div class="ubercxContent">
     <table class="tracking-summary-table">
