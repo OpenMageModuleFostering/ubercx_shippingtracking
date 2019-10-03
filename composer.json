@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Ubercx_Shippingtracking",
+    "name": "OpenMageModuleFostering\/Ubercx_Shippingtracking",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
     "description": "Embedded Shipping Tracking, It allows customer to see shipping details. Retailers can use USPS, Fedex, UPS and DHL shipping methods.",
     "authors": [
-    {
-        "name": "snapCX",
-        "email": "support@snapcx.io"
-    }
-],
+        {
+            "name": "snapCX",
+            "email": "support@snapcx.io"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
